@@ -1,5 +1,5 @@
 # DWES
-## Desarrollo Web Entorno Servidorç
+## Desarrollo Web Entorno Servidor
 
 Profesor: **Gabriel Rodríguez Flores**
 

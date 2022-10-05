@@ -1,0 +1,318 @@
+[
+    {
+        "id": "296a2a8eb81d6873",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "625bddd821cfd0ce",
+        "type": "switch",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "property": "player",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "machine",
+                "vt": "msg"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 710,
+        "y": 200,
+        "wires": [
+            [
+                "06ba22e8e7462fe7"
+            ],
+            [
+                "d5512eacfbd53f4f"
+            ]
+        ]
+    },
+    {
+        "id": "80befa89be165ab3",
+        "type": "function",
+        "z": "296a2a8eb81d6873",
+        "name": "Machine",
+        "func": "msg.machine = Math.floor(Math.random()*3);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "625bddd821cfd0ce"
+            ]
+        ]
+    },
+    {
+        "id": "ea0ddc95a2cbecd4",
+        "type": "debug",
+        "z": "296a2a8eb81d6873",
+        "name": "Resultado",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "winner",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "06ba22e8e7462fe7",
+        "type": "function",
+        "z": "296a2a8eb81d6873",
+        "name": "Empate",
+        "func": "msg.payload = 'Empate'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 80,
+        "wires": [
+            [
+                "ea0ddc95a2cbecd4",
+                "1a77768fbd073392"
+            ]
+        ]
+    },
+    {
+        "id": "d5512eacfbd53f4f",
+        "type": "function",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "func": "if(msg.player == 0 && msg.machine == 1){\n    msg.payload = 'machine';\n}else if(msg.player == 0 && msg.machine == 2){\n    msg.payload = 'machine';\n}else if(msg.player == 1 && msg.machine == 0){\n    msg.payload = 'machine';\n}else if(msg.player == 1 && msg.machine == 2){\n    msg.payload = 'machine';\n}else if(msg.player == 2 && msg.machine == 0){\n    msg.payload = 'machine';\n}else if(msg.player == 2 && msg.machine == 1){\n    msg.payload = 'machine';\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 260,
+        "wires": [
+            [
+                "ea0ddc95a2cbecd4",
+                "1a77768fbd073392"
+            ]
+        ]
+    },
+    {
+        "id": "8a26b3b7a7e959a3",
+        "type": "http in",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "url": "/ping",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "5211ad525cc46aaf",
+                "3d36bbdd636cbcc1"
+            ]
+        ]
+    },
+    {
+        "id": "d212feee0ff65f50",
+        "type": "http response",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 760,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5211ad525cc46aaf",
+        "type": "debug",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b57cfd800735e61c",
+        "type": "http in",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "url": "/ping",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 600,
+        "wires": [
+            [
+                "d212feee0ff65f50",
+                "5211ad525cc46aaf"
+            ]
+        ]
+    },
+    {
+        "id": "3d36bbdd636cbcc1",
+        "type": "function",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "func": "msg.payload = \"<h1>It works!</h1>\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "d212feee0ff65f50"
+            ]
+        ]
+    },
+    {
+        "id": "ff53d6f95b7317aa",
+        "type": "http in",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "url": "/piedra",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "71e2f451b60ef17f"
+            ]
+        ]
+    },
+    {
+        "id": "71e2f451b60ef17f",
+        "type": "function",
+        "z": "296a2a8eb81d6873",
+        "name": "function 1",
+        "func": "msg.player = 0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 80,
+        "wires": [
+            [
+                "80befa89be165ab3"
+            ]
+        ]
+    },
+    {
+        "id": "9b5614b99eda51b6",
+        "type": "function",
+        "z": "296a2a8eb81d6873",
+        "name": "function 2",
+        "func": "msg.player = 1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "80befa89be165ab3"
+            ]
+        ]
+    },
+    {
+        "id": "e146b7cc09c67b3b",
+        "type": "http in",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "url": "/papel",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "9b5614b99eda51b6"
+            ]
+        ]
+    },
+    {
+        "id": "34e04ab1c95377ae",
+        "type": "http in",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "url": "/tijera",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "d543c253a45ff61f"
+            ]
+        ]
+    },
+    {
+        "id": "d543c253a45ff61f",
+        "type": "function",
+        "z": "296a2a8eb81d6873",
+        "name": "function 3",
+        "func": "msg.player = 2\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "80befa89be165ab3"
+            ]
+        ]
+    },
+    {
+        "id": "1a77768fbd073392",
+        "type": "http response",
+        "z": "296a2a8eb81d6873",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1120,
+        "y": 240,
+        "wires": []
+    }
+]

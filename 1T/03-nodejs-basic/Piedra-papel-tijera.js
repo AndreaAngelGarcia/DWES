@@ -5,14 +5,14 @@ function PiedraPapelTijera (seleccionUsuarioStr = 1){
 	console.log("*JUEGO PIEDRA PAPEL TIJERA*");
 	console.log("---------------------------");
 	
-	    let seleccionOrdenador = Math.floor(Math.random()*3)+1;
-		const seleccionUsuario = parseInt(seleccionUsuarioStr);
+	let seleccionOrdenador = Math.floor(Math.random()*3)+1;
+	const seleccionUsuario = parseInt(seleccionUsuarioStr);
 
-        console.log("Indique su seleccion [1 = Piedra, 2 = Papel, 3 = Tijera]: ");
+    console.log("Indique su seleccion [1 = Piedra, 2 = Papel, 3 = Tijera]: ");
 		
-        console.log("Ha elegido "+ seleccionUsuario);
+    console.log("Ha elegido "+ seleccionUsuario);
 
-		console.log("El ordenador acaba de elegir...");
+	console.log("El ordenador acaba de elegir...");
 
         switch (seleccionOrdenador){
 			case 1:

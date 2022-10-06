@@ -1,20 +1,19 @@
 
-function PiedraPapelTijera (){
+function PiedraPapelTijera (seleccionUsuario = 0){
 
-	//Realizar juego piedra,papel o tijera
-
-		console.log("---------------------------");//INTRO PROGRAMA
-		console.log("*JUEGO PIEDRA PAPEL TIJERA*");
-		console.log("---------------------------");
+	console.log("---------------------------");//INTRO PROGRAMA
+	console.log("*JUEGO PIEDRA PAPEL TIJERA*");
+	console.log("---------------------------");
 	
-		let seleccionOrdenador = (Math.random() * 3) + 1;
+	    let seleccionOrdenador = Math.round(Math.random()*3)+1;
 
         console.log("Indique su seleccion [1 = Piedra, 2 = Papel, 3 = Tijera]: ");
-		let seleccionUsuario = 1;
+		
         console.log("Ha elegido "+ seleccionUsuario);
 
 		console.log("El ordenador acaba de elegir...");
-		switch (seleccionOrdenador){
+
+        switch (seleccionOrdenador){
 			case 1:
 				console.log("Piedra");
 				switch (seleccionUsuario){
@@ -53,4 +52,4 @@ function PiedraPapelTijera (){
 	}
 }
 
-PiedraPapelTijera();
+PiedraPapelTijera(process.argv[2]);

@@ -1,6 +1,5 @@
 
-function Fibonacci() {
-    let n = 10;
+function Fibonacci(n = 0) {
     let num1 = 0;
     let num2 = 1;
     let suma = 1;
@@ -19,5 +18,6 @@ function Fibonacci() {
             num2 = suma;
         }
 }
- 
-Fibonacci();
+
+//process argv para poner por consola un argumento
+Fibonacci(process.argv[2]);

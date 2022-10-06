@@ -1,11 +1,12 @@
 
-function PiedraPapelTijera (seleccionUsuario = 0){
+function PiedraPapelTijera (seleccionUsuarioStr = 1){
 
 	console.log("---------------------------");//INTRO PROGRAMA
 	console.log("*JUEGO PIEDRA PAPEL TIJERA*");
 	console.log("---------------------------");
 	
-	    let seleccionOrdenador = Math.round(Math.random()*3)+1;
+	    let seleccionOrdenador = Math.floor(Math.random()*3)+1;
+		const seleccionUsuario = parseInt(seleccionUsuarioStr);
 
         console.log("Indique su seleccion [1 = Piedra, 2 = Papel, 3 = Tijera]: ");
 		

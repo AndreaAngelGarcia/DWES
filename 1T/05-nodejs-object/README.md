@@ -1,1 +1,1 @@
-Ejercicios de clase + ejercicios para casa.
+Ejercicios de clase + ejercicios fáciles y medios para casa.

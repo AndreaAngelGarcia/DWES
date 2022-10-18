@@ -16,10 +16,9 @@ rl.question('*******Bienvenido al editor de notas********\n1. Crear nueva nota\n
                 rl.question('Introduzca el contenido de la nota:\n\n', function (contenido){
     
                     const fs = require('fs');
-    
-                        fs.writeFile(name +'.note', contenido, function (err) {
-                        if (err) throw err;
-                        console.log('Nota Creada!');
+                    fs.writeFile(name +'.note', contenido, function (err) {
+                     if (err) throw err;
+                    console.log('Nota Creada!');
                     });
     
                     rl.close();

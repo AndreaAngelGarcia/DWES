@@ -1,3 +1,5 @@
-### NODEJS: Módulos nativos
+### #️⃣6️⃣ NODEJS: Módulos nativos 
 
-Ejercicios clase + ejercicio casa
+---
+
+Ejercicios clase + ejercicio editor de notas para casa.

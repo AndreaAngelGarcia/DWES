@@ -1,5 +1,5 @@
-### #️⃣7️⃣ NODEJS: Módulos nativos 
+### #️⃣7️⃣ NODEJS AVANZADO: Callback y Promesas.
 
 ---
 
-Ejercicios clase + ejercicio casa.
+Ejercicio clase.

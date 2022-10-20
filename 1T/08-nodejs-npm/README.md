@@ -2,4 +2,4 @@
 
 ---
 
-Ejercicios clase + ejercicio clase + inicio proyecto.
+Ejercicios clase + ejercicio casa + inicio proyecto.

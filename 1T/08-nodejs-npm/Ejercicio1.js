@@ -1,3 +1,5 @@
-const chalk = require('chalk');
+import chalk from 'chalk';
 
-console.log(chalk.blue('Hello world!'));
+const { blue } = chalk;
+
+console.log(`Texto en ${blue('azul')}`);

@@ -1,13 +1,17 @@
-/* Función asíncrona */
+import fetch from 'node-fetch';
 
-async function start(){
-    try {
-        const response = await fetch("https://swapi.dev/api/people/10");
-        const data = await response.json();
-        console.log(data.name);
-    }catch(error) {
-        console.log('Error: ', error.message);
-    }
-}
+const obiWan = fetch("https://swapi.dev/api/people/10");
+const darthVader = fetch("https://swapi.dev/api/people/4");
+const leia = fetch("https://swapi.dev/api/people/5");
 
-start();
+
+const respuestas = await Promise.all([obiWan, darthVader, leia]);
+
+const array = respuestas.map(async r => {
+    const starWars = await r.json();
+    return starWars.name;
+});
+
+const resultados = await Promise.all(array);
+
+console.log(resultados);

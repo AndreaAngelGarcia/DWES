@@ -15,12 +15,5 @@ Promise.all([obiWan, darthVader, leia])
     });
 
 
-/* Función asíncrona */
 
-async function start(){
-    
-
-}
-
-start();
 

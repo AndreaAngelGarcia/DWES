@@ -1,4 +1,4 @@
-### #️⃣8️⃣ NODEJS: Node Packages Manager
+### #️⃣8️⃣ NODEJS: Node Packages Manager.
 
 ---
 

@@ -2,7 +2,7 @@
 
 ---
 
-Ejercicios clase + ejercicio casa + proyecto.
+Ejercicios clase + ejercicios casa + proyecto.
 
 
 ---

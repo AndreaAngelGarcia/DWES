@@ -1,4 +1,4 @@
-### #️⃣1️⃣0️⃣ NODEJS: NPM Scripts.
+### #️⃣1️⃣0️⃣ NODEJS: Debug con VSCODE.
 
 ---
 

@@ -5,8 +5,19 @@
   "description": "---",
   "main": "index.js",
   "scripts": {
-    "date": "node fecha.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "@comment date": "Script llamado date que imprima la fecha actual",
+    "date": "node fecha.js",    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "@comment crear": "Crea carpeta files",
+    "crear": "mkdir files",
+    "@comment crear:js": "Crea fichero js con nombre por argumentos",
+    "crear:js": "node crearArchivo.js",
+    "@comment crear:carpeta": "Crea carpeta con nombre por argumentos",
+    "crear:carpeta": "cd files && mkdir",
+    "@comment borrar": "Borra la carpeta files completamente",
+    "borrar": "rmdir files",
+    "@comment borrar:js": "Borra todos los ficheros js de la carpeta files",
+    "borrar:js": "cd files && del files * .js"
   },
   "author": "Andrea Angel",
   "license": "ISC",

@@ -2,7 +2,7 @@
 
 ---
 
-Proyecto 1º Trimestre.
+Proyecto 1º Trimestre. -> EDITOR DE NOTAS
 
 ---
 > 25/10/2022

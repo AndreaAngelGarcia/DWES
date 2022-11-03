@@ -7,7 +7,6 @@ Ejercicios clase + ejercicio casa.
 
 ---
 
-
 ### EJERCICIOS CLASE -> *NO HAY QUE HACERLAS*
     1. Usar la consola en medio de una ejecución
     2. Añadir variables y expresiones en el panel de debug
@@ -24,7 +23,6 @@ Ejercicios clase + ejercicio casa.
   segundo. El proyecto contará con el fichero de configuración para depurar en vscode. Deberá tener al
   menos dos configuraciones:
   
-    1. Ejecutar siempre el index.js.
-    2. Ejercutar el archivo actual del editor.
+    1. Ejecutar siempre el index.js. 
+    2. Ejercutar el archivo actual del editor. 
   
-

@@ -15,7 +15,7 @@
     "@comment crear:carpeta": "Crea carpeta con nombre por argumentos",
     "crear:carpeta": "cd files && mkdir",
     "@comment borrar": "Borra la carpeta files completamente",
-    "borrar": "rmdir files",
+    "borrar": "rmdir /S files",
     "@comment borrar:js": "Borra todos los ficheros js de la carpeta files",
     "borrar:js": "cd files && del files * .js",
     "@comment imprime:azul": "Imprime en azul",

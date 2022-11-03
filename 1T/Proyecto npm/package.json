@@ -1,10 +1,14 @@
 {
   "name": "proyecto-npm",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Proyecto 1º trimestre DAWES",
   "main": "editorNotas.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "@comment notas": "Atajamos la ejecución de notas entrando directamente a las opciones.",
+    "notas:crear": "node editorNotas.js 1",
+    "notas:editar": "node editorNotas.js 2",
+    "notas:eliminar": "node editorNotas.js 3"
   },
   "author": "Andrea Ángel",
   "license": "ISC"

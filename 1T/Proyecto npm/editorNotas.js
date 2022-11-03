@@ -4,11 +4,9 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-rl.question('*******Bienvenido al editor de notas********\n1. Crear nueva nota\n2. Editar nota existente\n3. Eliminar nota\n\nElija una opción:\n', (answer) => {
-   
+  
     /* CREAR NOTA */
-    if (answer == 1) {
+    if (process.argv[2]  == 1) {
         console.log('Has elegido "Crear nota"\n');
 
             rl.question('Introduzca el nombre de la nota:\n\n', function (name){
@@ -26,7 +24,7 @@ rl.question('*******Bienvenido al editor de notas********\n1. Crear nueva nota\n
             });
         
     /* EDITAR NOTA */
-    } else if(answer == 2) {
+    } else if(process.argv[2] == 2) {
         console.log('Has elegido "Editar nota", estos son los archivos en la carpeta: ');
 
         //Primero leemos todos los archivos que hay en la carpeta
@@ -65,7 +63,7 @@ rl.question('*******Bienvenido al editor de notas********\n1. Crear nueva nota\n
     });
         
     /* BORRAR NOTA */ 
-    } else if (answer == 3) {
+    } else if (process.argv[2] == 3) {
         console.log('Has introducido "Eliminar nota", estas son las notas que puede elegir: \n');
 
             const fs = require('fs');
@@ -85,4 +83,4 @@ rl.question('*******Bienvenido al editor de notas********\n1. Crear nueva nota\n
         console.log('No has introducido correctamente los datos.');
         rl.close();
     }
-});
+

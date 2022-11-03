@@ -1,17 +1,23 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${file}"
-        }
-    ]
+    { // Configuración para arrancar la aplicación sin importar donde está
+    "type": "node",
+   "request": "launch",
+    "name": "Launch API",
+    "outputCapture": "std",
+    "skipFiles": [
+    "<node_internals>/**"
+    ],
+    "program": "${workspaceFolder}/index.js"
+
+   },
+       { // Configuración base para ejecutar el archivo abierto en el editor
+           "type": "node",
+           "request": "launch",
+           "name": "Launch Current Opened File",
+           "outputCapture": "std",
+           "program": "${file}"
+       }
+   ]
 }

@@ -9,7 +9,7 @@ Ejercicios clase + ejercicio casa + proyecto.
 
 
 ### EJERCICIOS CLASE
-  1. Realizar un package.json con los script básicos de los ejemplos
+  1. Realizar un package.json con los script básicos de los ejemplos -> *NO HAY QUE HACERLO*
   2. Script llamado date que imprima la fecha actual (en bash o nodejs) -> *fecha.js*
   
 ### EJERCICIOS CASA
@@ -29,11 +29,11 @@ Ejercicios clase + ejercicio casa + proyecto.
   4. Realizar un programa y los scripts correspondientes para imprimir un argumento pasado en
   colores:
   
-  • imprime:azul Imprime en azul
+  • imprime:azul Imprime en azul -> *colorAzul.js*
   
-  • imprime:rojo Imprime en rojo
+  • imprime:rojo Imprime en rojo -> *colorRojo.js*
   
-  • imprime:verde Imprime en verde
+  • imprime:verde Imprime en verde -> *colorVerde.js*
   
 ### PROYECTO
   • Adaptar el proyecto de gestor de notas para que si le indicamos argumentos, acceda directamente

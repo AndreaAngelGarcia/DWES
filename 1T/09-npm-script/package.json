@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "@comment date": "Script llamado date que imprima la fecha actual",
-    "date": "node fecha.js",    
+    "date": "node fecha.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "@comment crear": "Crea carpeta files",
     "crear": "mkdir files",
@@ -17,11 +17,18 @@
     "@comment borrar": "Borra la carpeta files completamente",
     "borrar": "rmdir files",
     "@comment borrar:js": "Borra todos los ficheros js de la carpeta files",
-    "borrar:js": "cd files && del files * .js"
+    "borrar:js": "cd files && del files * .js",
+    "@comment imprime:azul": "Imprime en azul",
+    "imprime:azul": "node colorAzul.js",
+    "@comment imprime:verde": "Imprime en verde",
+    "imprime:verde": "node colorVerde.js",
+    "@comment imprime:rojo": "Imprime en rojo",
+    "imprime:rojo": "node colorRojo.js"
   },
   "author": "Andrea Angel",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.1.2",
     "init": "^0.1.2",
     "luxon": "^3.1.0"
   }

@@ -1,35 +1,20 @@
-import {DateTime} from 'luxon';
 
-function dateCompare(fecha1, fecha2) {
-    if (fecha1 < fecha2) {
+function dateCompare(dateStr1, dateStr2) {
+    const date1 = new Date(dateStr1);
+    const date2 = dateStr2 ? new Date(dateStr2) : new Date();
+
+    if(date1 <= date2) {
         const fecha = {
-            startDate: fecha1, 
-            endDate: fecha2
+            startDate: dateStr1,
+            endDate: date2.toISOString(),
         }
         return fecha;
-    } else if (fecha1 > fecha2) {
+    }else if (date1 > date2) {
         const fecha = {
-            startDate: fecha2, 
-            endDate: fecha1
+            startDate: date2.toISOString(),
+            endDate: dateStr1
         }
         return fecha;
-    } else {
-
-        fecha2 = DateTime.now().toFormat("dd/MM/yyyy");
-
-        if (fecha1 < fecha2) {
-            const fecha = {
-                startDate: fecha1, 
-                endDate: fecha2
-            }
-            return fecha;
-        } else if (fecha1 > fecha2) {
-            const fecha = {
-                startDate: fecha2, 
-                endDate: fecha1
-            }
-            return fecha;
-        } 
     }
 }
 export default dateCompare;

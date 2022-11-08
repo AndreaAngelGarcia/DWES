@@ -1,30 +1,32 @@
-### #️⃣1️⃣0️⃣ NODEJS: Debug con VSCODE.
+### #️⃣1️⃣1️⃣ NODEJS: Test unitarios.
 
 ---
 
-Ejercicios clase + ejercicio casa.
+Ejercicios clases + ejercicios casa.
 
 
 ---
 
 
-### EJERCICIOS CLASE -> *NO HAY QUE HACERLAS*
-    1. Usar la consola en medio de una ejecución
-    2. Añadir variables y expresiones en el panel de debug
-    3. Alterar el valor de una variable y continuar la ejecución
-    4. Deshabilitar los puntos de ruptura
-    5. Realizar una petición con node-fetch e inspeccionar la respuesta en el inspector
-    6. Extraer los datos de un objeto de una librería
-      • Propiedades
-      • Métodos
-      • Eventos
+### EJERCICIOS CLASE 
+    1. Realizar ejercicio fizzbuzz con sus test correspondientes con AVA.
+        - Programa funcionando correctamente
+        – Test realizados con ava, con cobertura de código 100%
+        – Docker-compose para arrancar SonarQube
+        – Fichero de configuración de SonarQube
+        – Script del package.json para automatizar las labores de: arrancar SonarMQ, lanzar los
+            test, lanzar los test en modo watch y generar los ficheros de test.
+        
+    2. Realizar ejercicios de comparación de fechas con sus test usando AVA. Se realiza una función
+    llamada dateCompare que:
+        • Al recibir dos fechas, devolverá cual es anterior y cual es posterior en un objeto
+        { startDate: 'ISODateString', endDate: 'ISODateString'}.
+        • Si solo recibe una fecha, se comparará con el momento actual.
   
 ### EJERCICIOS CASA
-  Crear un proyecto con dos archivos javascript (index.js, app.js) los cuales el primero importará el
-  segundo. El proyecto contará con el fichero de configuración para depurar en vscode. Deberá tener al
-  menos dos configuraciones:
-  
-    1. Ejecutar siempre el index.js.
-    2. Ejercutar el archivo actual del editor.
+    3. Investigar y realizar los test de los ejercicios usando Jest.
+    
+    4. Modificar fizzbuzz para recibir el numero y las condiciones en un objeto. 
+       Modificación sobre el script y test realizados de fizzbuzz. En Jest o AVA.
   
 

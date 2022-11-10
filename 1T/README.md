@@ -1,7 +1,11 @@
-### 📃 1º TRIMESTRE - NODEJS.
+## 📃 1º TRIMESTRE - NODEJS.
 
 
+---
 
+  
+  ## ✏️ TAREAS 
+  
 #### -> 02-NODERED ➡️ 06.10.2022   ✔️
 
 #### -> 03-NODEJS-BASIC ➡️ 06.10.2022   ✔️
@@ -25,4 +29,9 @@
 #### -> 12-SETUP-WORKSPACE ➡️ 10.11.2022    ✔️
 
 #### -> 13-NODEJS-SERVER ➡️ 15.11.2022 
+
+
+---
+
+  ## 📚 PROYECTO NPM
 

@@ -9,6 +9,8 @@ const fs = require('fs');
 
 const arg = process.argv;
 
+const files = fs.readdirSync('./');
+
 /* CREAR NOTA */
 if (parseInt(arg[2], 10) === 1) {
   console.log('Has elegido "Crear nota"\n');
@@ -29,7 +31,6 @@ if (parseInt(arg[2], 10) === 1) {
   console.log('Has elegido "Editar nota", estos son los archivos en la carpeta: ');
 
   // Primero leemos todos los archivos que hay en la carpeta
-  const files = fs.readdirSync('./');
   console.log(files);
 
   // Mostramos lo que hay en el archivo elegido
@@ -63,7 +64,6 @@ if (parseInt(arg[2], 10) === 1) {
 } else if (parseInt(arg[2], 10) === 3) {
   console.log('Has introducido "Eliminar nota", estas son las notas que puede elegir: \n');
 
-  const files = fs.readdirSync('./');
   console.log(files);
 
   rl.question('Introduzca la nota que quieras borrar: ', borrar => {

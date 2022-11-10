@@ -1,4 +1,5 @@
 {
+  "type": "commonjs",
   "name": "proyecto-npm",
   "version": "0.0.1",
   "description": "Proyecto 1º trimestre DAWES",
@@ -8,8 +9,18 @@
     "@comment notas": "Atajamos la ejecución de notas entrando directamente a las opciones.",
     "notas:crear": "node editorNotas.js 1",
     "notas:editar": "node editorNotas.js 2",
-    "notas:eliminar": "node editorNotas.js 3"
+    "notas:eliminar": "node editorNotas.js 3",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ignore-path .gitignore ."
   },
   "author": "Andrea Ángel",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-ava": "^13.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.31.10",
+    "nodemon": "^2.0.20"
+  }
 }

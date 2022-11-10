@@ -1,86 +1,80 @@
 const readline = require('readline');
 
 const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
+  input: process.stdin,
+  output: process.stdout,
 });
-  
-    /* CREAR NOTA */
-    if (process.argv[2]  == 1) {
-        console.log('Has elegido "Crear nota"\n');
 
-            rl.question('Introduzca el nombre de la nota:\n\n', function (name){
-    
-                rl.question('Introduzca el contenido de la nota:\n\n', function (contenido){
-    
-                    const fs = require('fs');
-                    fs.writeFile(name +'.note', contenido, function (err) {
-                     if (err) throw err;
-                    console.log('Nota Creada!');
-                    });
-    
-                    rl.close();
-                });    
-            });
-        
-    /* EDITAR NOTA */
-    } else if(process.argv[2] == 2) {
-        console.log('Has elegido "Editar nota", estos son los archivos en la carpeta: ');
+const fs = require('fs');
 
-        //Primero leemos todos los archivos que hay en la carpeta
-        const fs = require('fs');
-        var files = fs.readdirSync("./");
-        console.log(files);
+const arg = process.argv;
 
-        //Mostramos lo que hay en el archivo elegido
-        rl.question('Introduzca la nota que quiera elegir:\n\n', function (archivo){
+/* CREAR NOTA */
+if (parseInt(arg[2], 10) === 1) {
+  console.log('Has elegido "Crear nota"\n');
 
-            var texto = fs.readFileSync(archivo, {encoding:"utf-8"});
+  rl.question('Introduzca el nombre de la nota:\n\n', name => {
+    rl.question('Introduzca el contenido de la nota:\n\n', contenido => {
+      fs.writeFile(`${name}.note`, contenido, err => {
+        if (err) throw err;
+        console.log('Nota Creada!');
+      });
 
-            console.log('\nEl archivo elegido contiene la siguiente informacion: \n');
-
-            console.log(texto);
-
-            console.log("\n");
-            
-        //Editamos el archivo elegido
-        rl.question('Introduzca el nuevo contenido:\n\n', function (nuevoContenido){
-
-            fs.writeFile(archivo, nuevoContenido, function (err) {
-
-                if (err) throw err;
-                console.log('Contenido editado!\n\n');
-
-                console.log('El nuevo contenido es:\n');
-
-                //Leemos el contenido de la nota editada
-                var texto1 = fs.readFileSync(archivo, {encoding:"utf-8"});
-                console.log(texto1);
-
-                rl.close();
-            }); 
-        });
+      rl.close();
     });
-        
-    /* BORRAR NOTA */ 
-    } else if (process.argv[2] == 3) {
-        console.log('Has introducido "Eliminar nota", estas son las notas que puede elegir: \n');
+  });
 
-            const fs = require('fs');
-            var files = fs.readdirSync("./");
-            console.log(files);
+  /* EDITAR NOTA */
+} else if (parseInt(arg[2], 10) === 2) {
+  console.log('Has elegido "Editar nota", estos son los archivos en la carpeta: ');
 
-            rl.question('Introduzca la nota que quieras borrar: ', function(borrar){
+  // Primero leemos todos los archivos que hay en la carpeta
+  const files = fs.readdirSync('./');
+  console.log(files);
 
-                fs.unlink(borrar, function (err) {
-                if (err) throw err;
-                console.log('Archivo borrado!');
+  // Mostramos lo que hay en el archivo elegido
+  rl.question('Introduzca la nota que quiera elegir:\n\n', archivo => {
+    const texto = fs.readFileSync(archivo, { encoding: 'utf-8' });
 
-                rl.close();
-                });
-            });
-    } else {
-        console.log('No has introducido correctamente los datos.');
+    console.log('\nEl archivo elegido contiene la siguiente informacion: \n');
+
+    console.log(texto);
+
+    console.log('\n');
+
+    // Editamos el archivo elegido
+    rl.question('Introduzca el nuevo contenido:\n\n', nuevoContenido => {
+      fs.writeFile(archivo, nuevoContenido, err => {
+        if (err) throw err;
+        console.log('Contenido editado!\n\n');
+
+        console.log('El nuevo contenido es:\n');
+
+        // Leemos el contenido de la nota editada
+        const texto1 = fs.readFileSync(archivo, { encoding: 'utf-8' });
+        console.log(texto1);
+
         rl.close();
-    }
+      });
+    });
+  });
 
+  /* BORRAR NOTA */
+} else if (parseInt(arg[2], 10) === 3) {
+  console.log('Has introducido "Eliminar nota", estas son las notas que puede elegir: \n');
+
+  const files = fs.readdirSync('./');
+  console.log(files);
+
+  rl.question('Introduzca la nota que quieras borrar: ', borrar => {
+    fs.unlink(borrar, err => {
+      if (err) throw err;
+      console.log('Archivo borrado!');
+
+      rl.close();
+    });
+  });
+} else {
+  console.log('No has introducido correctamente los datos.');
+  rl.close();
+}

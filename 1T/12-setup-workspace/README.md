@@ -11,7 +11,7 @@ Ejercicios clases + actualización proyecto npm.
 #### EJERCICIOS CLASE 
     1. Configurar un proyecto para que detecte los errores de estilo de código.
     
-    2. Detectar y arreglar malas prácticas y estilos en el código con Eslint.
+    2. Detectar y arreglar malas prácticas y estilos en el código con Eslint. -> Ejercicio2.js
     
     3. Ver errores del siguiente código:
         const chalk = require('chalk');
@@ -28,8 +28,9 @@ Ejercicios clases + actualización proyecto npm.
          module.exports = nonExistingVar;
      
      4. Arreglar el código anterior según la guía de estilos de Airbnb
+        -> Ejercicio3-4.js
 
-### Proyecto npm 
+#### PROYECTO NPM
    
    Aplicar la configuración de nodemon, ESlint y VSCode al proyecto de notas.
 

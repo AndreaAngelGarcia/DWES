@@ -75,6 +75,6 @@ if (parseInt(arg[2], 10) === 1) {
     });
   });
 } else {
-  console.log('No has introducido correctamente los datos.');
+  console.log('No has introducido correctamente los datos, introduce un número del 1 al 3.');
   rl.close();
 }

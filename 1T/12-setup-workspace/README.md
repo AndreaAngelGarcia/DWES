@@ -1,38 +1,35 @@
-### #️⃣1️⃣1️⃣ NODEJS: Test unitarios.
+### #️⃣1️⃣2️⃣ NODEJS: Configuración del IDE.
 
 ---
 
-Ejercicios clases + ejercicios casa.
+Ejercicios clases + actualización proyecto npm.
 
 
 ---
 
 
 #### EJERCICIOS CLASE 
-    1. Realizar ejercicio fizzbuzz con sus test correspondientes con AVA.
-        - Programa funcionando correctamente
-        – Test realizados con ava, con cobertura de código 100%
-        – Docker-compose para arrancar SonarQube
-        – Fichero de configuración de SonarQube
-        – Script del package.json para automatizar las labores de: arrancar SonarMQ, lanzar los
-            test, lanzar los test en modo watch y generar los ficheros de test.
-            
-        -> src:fizzbuzz.js, test:fizzbuzz.test.js
-            
-        
-    2. Realizar ejercicios de comparación de fechas con sus test usando AVA. Se realiza una función
-    llamada dateCompare que:
-        • Al recibir dos fechas, devolverá cual es anterior y cual es posterior en un objeto
-        { startDate: 'ISODateString', endDate: 'ISODateString'}.
-        • Si solo recibe una fecha, se comparará con el momento actual.
-        
-        -> src:dateCompare.js, test:dateCompare.test.js
-  
-### EJERCICIOS CASA
-    3. Investigar y realizar los test de los ejercicios usando Jest.
-        -> src:fizzbuzz.js, test:fizzbuzz-jest.test.js
+    1. Configurar un proyecto para que detecte los errores de estilo de código.
     
-    4. Modificar fizzbuzz para recibir el numero y las condiciones en un objeto. 
-       Modificación sobre el script y test realizados de fizzbuzz. En Jest o AVA.
-        -> src:fizzbuzz-ej4.js, test:fizzbuzz-ej4.test.js
+    2. Detectar y arreglar malas prácticas y estilos en el código con Eslint.
+    
+    3. Ver errores del siguiente código:
+        const chalk = require('chalk');
+    
+         var youShouldNeverUseVar = "This is my very long line that eslint should check as an error ............................................";
+
+         function myFunction(used, nonUsed){
+             if(used){
+                 console.log(used)
+                 return
+             }
+         }
+
+         module.exports = nonExistingVar;
+     
+     4. Arreglar el código anterior según la guía de estilos de Airbnb
+
+### Proyecto npm 
+   
+   Aplicar la configuración de nodemon, ESlint y VSCode al proyecto de notas.
 

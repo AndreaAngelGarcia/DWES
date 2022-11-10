@@ -21,4 +21,8 @@ integrar en este el desarrollo de la tarea realizada.
 
 ---
 
+> 10/11/2022
+
+• Aplicar la configuración de nodemon, ESlint y VSCode al proyecto de notas.
+
 

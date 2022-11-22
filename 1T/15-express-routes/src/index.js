@@ -63,6 +63,21 @@ app.get(`/query/`, (req, res) => {
 /* /body Imprimir todo el objeto entrante en una lista HTML en el que se muestren todos los
 parámetros: su clave y su valor. */
 
+const objeto = {1 : 'valor', 2: 'valor', 3:'valor'};
+const entradas = Object.entries(objeto);
+let list = [];
+
+function listaHTML() {
+  for (const key in entradas) {
+    list.push(`<li>${entradas[key]}</li>`);
+  }
+}
+
+listaHTML();
+
+app.get(`/body`, function (req, res) {
+  res.send(`Este es nuestro objeto: ${list}`);
+});
 
 
 /* /animals Crear un enrutador bajo dicha ruta establecer los siguientes endpoint: 
@@ -89,7 +104,7 @@ router.get(`/animals/bird`, (req, res) => {
     res.send({ "grow": "pio pio" });
 });
 
-router.get(`/animals/`, (req, res) => {
+router.get(`/*`, (req, res) => {
     res.send({
         "code": 404,
         "error": "Not Found",
@@ -103,6 +118,6 @@ export default router;
 
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Estamos escuchando en: http://localhost:${port}`);
 })
 

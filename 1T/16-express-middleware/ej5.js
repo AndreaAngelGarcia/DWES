@@ -34,21 +34,21 @@ app.get('/admin', function (req, res, next) {
     res.status(401).send({
         code: 401, message: 'Acceso restringido, por favor, incluya la palabra secreta en el parámetro password en la cabera de la petición'
     });
-    logger.error('ERROR 401')
+    logger.error('ERROR 401');
 });
 
 app.get('/admin/password', function (req, res, next) {
     res.status(401).send({
         code: 401, message: 'Acceso restringido, por favor, incluya la palabra secreta en el parámetro password en la cabera de la petición'
     });
-    logger.error('ERROR 401')
+    logger.error('ERROR 401');
 });
 
 app.get('/admin/password/*', function (req, res, next) {
     res.status(401).send({
         code: 401, message: 'Acceso restringido, por favor, incluya la palabra secreta en el parámetro password en la cabera de la petición'
     });
-    logger.error('ERROR 401')
+    logger.error('ERROR 401');
 });
 
 app.get('/admin/password:secret', function (req, res, next) {
@@ -58,17 +58,17 @@ app.get('/admin/password:secret', function (req, res, next) {
     res.status(401).send({
         code: 401, message: 'Acceso restringido, por favor, incluya la palabra secreta en el parámetro password en la cabera de la petición'
     });
-    logger.error('ERROR 401')
+    logger.error('ERROR 401');
 });
 
 app.get('/admin/password:secret', function (req, res, next) {
-    res.status(200)
-    res.send('Bienvenid@, disfrute del contenido')
-    logger.info('OK 200')
+    res.status(200);
+    res.send('Bienvenid@, disfrute del contenido');
+    logger.info('OK 200');
 });
 
 app.use('/', function (req, res, next) {
-    res.send('Para acceder a admin, escriba /admin')
+    res.send('Para acceder a admin, escriba /admin');
 });
 
 app.listen(port, () => {

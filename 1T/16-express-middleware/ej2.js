@@ -1,3 +1,6 @@
+/* Crear un logger con winston para imprimir a múltiples niveles formateando la salida con colores
+– Formato: [Fecha] nivel: Mensaje */
+
 import winston from "winston";
 
 const logConfiguration = {
@@ -19,4 +22,4 @@ const logger = winston.createLogger(logConfiguration);
 
 logger.info('Información, Winston!!!');
 logger.warn('Ten cuidado, Winston!!');
-logger.error('ERROR, WINSTON!');
+logger.error('Error, Winston!');

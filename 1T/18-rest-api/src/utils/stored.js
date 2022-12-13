@@ -1,9 +1,11 @@
-const users = [{"id":"1","name":"Andrea", "pass":"123"},
-{"id":"2","name":"Juanma", "pass":"456"},
-{"id":"3","name":"Richi", "pass":"789"},
-{"id":"4","name":"Manuel", "pass":"111"},
-{"id":"5","name":"Paco", "pass":"222"},
-{"id":"6","name":"Quiles", "pass":"333"}]
+const users = [
+    {"id":"1","name":"Andrea", "age":"25"},
+    {"id":"2","name":"Juanma", "age":"20"},
+    {"id":"3","name":"Richi", "age":"21"},
+    {"id":"4","name":"Manuel", "age":"23"},
+    {"id":"5","name":"Paco", "age":"21"},
+    {"id":"6","name":"Quiles", "age":"20"}
+];
 
 module.exports = {
     users,

@@ -26,3 +26,23 @@ integrar en este el desarrollo de la tarea realizada.
 • Aplicar la configuración de nodemon, ESlint y VSCode al proyecto de notas.
 
 
+---
+
+> 13/12/2022
+
+• Implementar la estructura para el proyecto de notas aplicando la división del código en los
+distintos módulos.
+
+---
+
+> 13/12/2022
+
+• Crear un servidor con rutas para el programa de notas. Ha de contener:
+    Aplicar buenas prácticas
+    Logger bien configurado
+    Control de errores
+    Estructura de carpetas MVC
+    Cobertura de test superior al 80%
+    Realización de colección
+
+

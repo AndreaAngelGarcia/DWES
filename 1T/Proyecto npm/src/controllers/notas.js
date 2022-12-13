@@ -63,16 +63,9 @@ function eliminarNotas(req, res) {
   // eslint-disable-next-line no-shadow
   const files = fs.readdirSync('./');
   console.log(files);
-
-  rl.question('Introduzca la nota que quieras borrar: \n\n', x => {
-    fs.unlink(x, err => {
-      if (err) throw err;
-      console.log('\n');
-      console.log('Archivo borrado!');
-    });
-
-    rl.close();
-  });
+  const { id } = req.params;
+  const deletedNote = noteService.deleteNote(id);
+  return res.status(200).send({ deletedNote });
 }
 
 module.exports = {

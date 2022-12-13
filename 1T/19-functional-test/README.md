@@ -3,7 +3,7 @@
 ---
 
 
-#### EJERCICIO CASA
+#### EJERCICIOS CASA
 
     1. Para el servidor creado de users, con Postman, Insomnia o Firecamp:
         • Crear colección

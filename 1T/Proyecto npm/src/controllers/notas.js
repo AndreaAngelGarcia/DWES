@@ -1,31 +1,31 @@
 const readline = require('readline');
 const fs = require('fs');
+
 const { logger } = require('../utils');
+const notasService = require('../services/notas');
 
 const files = fs.readdirSync('./');
 const arg = process.argv;
-
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-function crearNotas(req, res) {
-  rl.question('Introduzca el nombre de la nota:\n\n', x => {
-    rl.question('Introduzca el contenido de la nota:\n\n\n\n', y => {
-      fs.writeFile(`${x}.txt`, y, err => {
-        if (err) throw err;
-        console.log('Nota Creada!');
-      });
+function recogerNotas(name, data) {
+  const data = fs.readFileSync(data, 'utf8');
+  const notas = notasService.recogerNotas();
+  res.send(`${data}\n\n`);
+}
 
-      rl.close();
-    });
-  });
+function crearNotas(req, res) {
+  const { name, data } = req.body;
+  const notaCreada = notasService.crearNota(name, data);
+  res.status(201).send(notaCreada);
 }
 
 function editarNotas(req, res) {
   // eslint-disable-next-line no-shadow
-  const files = fs.readdirSync('./');
+  const files = fs.readdirSync('./files');
   console.log(files);
 
   // eslint-disable-next-line no-undef
@@ -64,7 +64,7 @@ function eliminarNotas(req, res) {
   const files = fs.readdirSync('./');
   console.log(files);
   const { id } = req.params;
-  const deletedNote = noteService.deleteNote(id);
+  const deletedNote = notasService.deleteNote(id);
   return res.status(200).send({ deletedNote });
 }
 

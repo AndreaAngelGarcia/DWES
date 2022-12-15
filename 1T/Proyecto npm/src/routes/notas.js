@@ -5,8 +5,10 @@ const { crearNotas, editarNotas, eliminarNotas } = require('../controllers/notas
 
 const router = express.Router();
 
-router.post('/notas', crearNotas);
-router.put('/notas/:name', editarNotas);
-router.delete('/notas/:name', eliminarNotas); // nota.note --> name Ç== nota
+router.get('/', recogerNotas);
+router.get('/:name', recogerNota);
+router.post('/:name', crearNotas);
+router.put('/:name', editarNotas);
+router.delete('/:name', eliminarNotas); // nota.note --> name == nota
 
 module.exports = router;

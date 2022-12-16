@@ -1,14 +1,13 @@
-const { application } = require('express');
 const express = require('express');
 
-const { crearNotas, editarNotas, eliminarNotas } = require('../controllers/notas');
+const { crearNota, editarNota, eliminarNota } = require('../controllers/notas');
 
 const router = express.Router();
 
-router.get('/', recogerNotas);
-router.get('/:name', recogerNota);
-router.post('/:name', crearNotas);
-router.put('/:name', editarNotas);
-router.delete('/:name', eliminarNotas); // nota.note --> name == nota
+// router.get('/', recogerNotas);
+// router.get('/:name', recogerNota);
+router.post('/', crearNota);
+router.put('/:name', editarNota);
+router.delete('/:name', eliminarNota); // nota.note --> name == nota
 
 module.exports = router;

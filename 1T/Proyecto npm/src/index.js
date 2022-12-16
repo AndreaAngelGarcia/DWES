@@ -9,5 +9,5 @@ const { port } = config;
 
 loaders.init(server);
 server.listen(port, () => {
-  logger.info(`Escuchando en el puerto: ${port}`);
+  logger.info(`Listening the port ${port}`);
 });

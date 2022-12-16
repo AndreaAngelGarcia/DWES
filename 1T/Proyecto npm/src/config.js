@@ -4,6 +4,6 @@ module.exports = {
   port,
   notes: {
     folder: 'files',
-    ext: 'notes',
+    ext: 'note',
   },
 };

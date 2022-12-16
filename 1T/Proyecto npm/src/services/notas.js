@@ -4,7 +4,6 @@ const notasUtils = require('../utils/notas');
 
 function crearNota(name, data) {
   fs.writeFileSync(notasUtils.getPath(name), data);
-  console.log(notasUtils.getPath(name));
 }
 
 function editarNota(name, data) {

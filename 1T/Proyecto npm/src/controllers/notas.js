@@ -1,4 +1,10 @@
+const fs = require('fs');
 const notasService = require('../services/notas');
+
+function recogerNotas(req, res) {
+  const files = fs.readdirSync('./files');
+  res.status(200).send(files);
+}
 
 function crearNota(req, res) {
   const { name, data } = req.body;
@@ -20,13 +26,8 @@ function eliminarNota(req, res) {
 }
 
 module.exports = {
+  recogerNotas,
   crearNota,
   editarNota,
   eliminarNota,
 };
-
-/* function recogerNotas(name, data) {
-  const data = fs.readFileSync(data, 'utf8');
-  const notas = notasService.recogerNotas();
-  res.send(`${data}\n\n`);
-} */

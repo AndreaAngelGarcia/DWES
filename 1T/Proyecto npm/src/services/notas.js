@@ -1,20 +1,24 @@
-/* TODOS LOS FS AQUI */
 const fs = require('fs');
 
+const notasUtils = require('../utils/notas');
+
 function crearNota(name, data) {
-  fs.writeFileSync(`${name}.note`, data);
+  fs.writeFileSync(notasUtils.getPath(name), data);
+}
+
+function editarNota(name, data) {
+  fs.writeFileSync(notasUtils.getPath(name), data);
+}
+
+function eliminarNota(name) {
+  // fs.unlink(notasUtils.getPath(name));
+  fs.unlink(notasUtils.getPath(name), err => {
+    if (err) throw err;
+  });
 }
 
 module.exports = {
   crearNota,
+  editarNota,
+  eliminarNota,
 };
-
-/*
-function crearNota(name, data) {
-  fs.writeFile(`${name}.note`, data, err => {
-    if (err) throw err;
-    console.log('Nota Creada!');
-  });
-
-  rl.close();
-} */

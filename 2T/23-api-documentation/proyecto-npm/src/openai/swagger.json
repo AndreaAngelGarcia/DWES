@@ -1,0 +1,13 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "version": "1.0.11",
+        "title": "My editor notes API",
+        "description": "RESTfull API for editor notes in memory",
+        "termsOfService": "http://swagger.io/terms/"
+    },
+    "paths": {
+    },
+    "components": {
+    }
+}

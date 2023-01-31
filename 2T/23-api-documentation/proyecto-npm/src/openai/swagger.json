@@ -6,46 +6,125 @@
         "description": "RESTfull API for editor notes in memory",
         "termsOfService": "http://swagger.io/terms/"
     },
-    "servers": [{
-        "url":"http://localhost:3000/api/v1"
-    }],
+    "servers": [
+        {
+            "url": "http://localhost:3000/"
+        }
+    ],
     "paths": {
-        "/": {
+        "/notas": {
             "get": {
                 "tags": [
                     "Notas"
                 ],
                 "summary": "Recoger todas las notas en memoria",
                 "description": "Recoger las notas que están almacenadas en memoria",
-                "parameters": [
-                    {}
-                ],
                 "responses": {
                     "200": {
                         "description": "Lista de notas",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "properties": {
-                                            "id": {
-                                                "type": "integer",
-                                                "format": "int64"
-                                            },
-                                            "name": {
-                                                "type": "string"
+                                    "type": "object",
+                                    "properties": {
+                                        "results": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "data": {
+                                                        "type": "string",
+                                                        "format": "int64"
+                                                    }
+                                                }
                                             }
                                         }
                                     }
-                                    
+                                }
+                            }
+                        }
+                    }
+                },
+                "201": {
+                    "description": "Lista de notas",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/examples/Nota",
+                                "properties": {
+                                    "results": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "data": {
+                                                    "type": "string",
+                                                    "format": "int64"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Notas"
+                ],
+                "summary": "Guardar todas las notas en memoria",
+                "description": "Enviar los datos de una nota que va a ser guardado en la memoria volátil.",
+                "responses": {
+                    "200": {
+                        "description": "Usuario añadido",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "results": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "format": "int64"
+                                                    },
+                                                    "name": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+        },
+        "components": {
+            "schemas": {
+                "User":{
+
+                }
+            },
+            "examples": {
+                "Nota": {
+                    "name": "notita",
+                    "data": "Esta es nuestra notita"
+                }
+            }
         }
-    },
-    "components": {}
+    }
 }

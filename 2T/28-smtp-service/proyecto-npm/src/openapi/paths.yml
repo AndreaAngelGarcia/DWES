@@ -77,3 +77,21 @@
             application/json:
               schema:
                 $ref: "#/components/schemas/DeleteNote"
+"/mail":
+  post:
+    tags:
+    - Notas
+    summary: Enviar email
+    description: Enviar email a un correo específico
+    parameters:
+      - name: email
+        in: path
+        description: Pon el correo
+    type: object
+    properties:
+      to:
+        type: string
+      subject:
+        type: string
+      text:
+        type: string

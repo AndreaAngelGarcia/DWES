@@ -1,5 +1,4 @@
 const fs = require('fs');
-const smtpService = require('../services/smtp-service');
 
 const { logger } = require('../utils');
 const notasService = require('../services/notas');
@@ -32,24 +31,9 @@ function eliminarNota(req, res) {
   logger.info('OK - Nota eliminada');
 }
 
-async function createMail(req, res, next) {
-  try {
-    const content = {
-      to: req.body.to,
-      subject: req.body.subject,
-      text: req.body.text,
-    };
-    const emailId = await smtpService.sendMail(content);
-    res.status(200).send({ id: emailId });
-  } catch (error) {
-    next(error);
-  }
-}
-
 module.exports = {
   recogerNotas,
   crearNota,
   editarNota,
   eliminarNota,
-  createMail,
 };

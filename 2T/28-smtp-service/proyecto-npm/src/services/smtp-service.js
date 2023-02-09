@@ -13,16 +13,16 @@ async function sendMail(content) {
     auth: {
       type: 'OAuth2',
       user,
-      accessToken: 'ya29.a0AVvZVsqwTsFnLJyhFIWEnMlaM7e-M-l_XP_rctwk1FA-adxdTFH-8jeY4Ky7TUck581SIp8A5i-0WNB6tEArLGsoSeLta4-IOFoLk-RaVKKIieS9BecIH5K0K0gsE_0MIV4ngpu1PQxaoLD5woObfm9eDrdYaCgYKAQYSARISFQGbdwaILMb2ZyV1xTSZxUMYUvz97g0163',
+      accessToken: 'ya29.a0AVvZVsqFrQsGRYHGKOvjtelBfFUnoO4LsyutsXrdiXxuLZ5ivd-1z1UGc7Cc9X9aEbOnm3_3CTvwJ2bjMshNIvRcRLhYOgWbHHVAXYGfQ0Oo1_NRuCFz9OLie_-0KTBmyRppOqZaOSJg4m0y7qDWgGkN-2co4yEaCgYKAU4SAQASFQGbdwaIbEUshvFvkHcDberLFlpCDQ0166',
       clientId: '1040573630954-4bs8cj3qupnfhaj18hi2e4ihcf8uf6dh.apps.googleusercontent.com',
       clientSecret: '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',
-      refreshToken: '1//04CIAHocJkiWMCgYIARAAGAQSNwF-L9Iryw70fz5xybBGfXPglcBCn0RWe8CUFZoOhzJEMaHldC7gdRR0mpJKHqywdeMEdiLrJ1k',
+      refreshToken: '1//04_76B-PaptdHCgYIARAAGAQSNwF-L9Irg7PJQnN2OU2DzWsSexvvtvNX2qUOZW6e-N6_bP7ZovpqVpaBHoniH7lVgCRDrQGbT1w',
     },
   });
 
   const info = await transporter.sendMail({
     from: 'andreaangelgarcia@gmail.com',
-    to,
+    to: 'andrea.angel@adaits.es',
     subject,
     text,
   });

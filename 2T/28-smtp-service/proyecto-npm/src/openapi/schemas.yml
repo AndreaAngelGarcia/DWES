@@ -30,8 +30,6 @@ DeleteNote:
 Email:
   type: object
   properties:
-    to:
-      type: string
     subject:
       type: string
     text:

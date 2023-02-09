@@ -2,6 +2,5 @@
 
 ---
 
-
 #### EJERCICIO CASA
    - Añadir documentación Swagger al proyecto de notas

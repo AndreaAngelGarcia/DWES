@@ -1,6 +1,6 @@
-### #️⃣2️⃣3️⃣ OpenApi (Swagger): Documentación técnica
+### #️⃣2️⃣8️⃣ SMTP: Uso de servicios externos
 
 ---
 
 #### EJERCICIO CASA
-   - Añadir documentación Swagger al proyecto de notas
+   - Añadir al proyecto de notas

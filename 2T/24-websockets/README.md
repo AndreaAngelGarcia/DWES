@@ -1,7 +1,7 @@
-### #️⃣2️⃣3️⃣ OpenApi (Swagger): Documentación técnica
+### #️⃣2️⃣4️⃣ Websockets
 
 ---
 
 
 #### EJERCICIO CASA
-   - Añadir documentación Swagger al proyecto de notas
+   - Se propone como ejercicio opcional la realización del tutorial de la página de SocketIO o algun ejercicio práctico de libre realización.

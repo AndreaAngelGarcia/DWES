@@ -4,8 +4,13 @@ Al principio esta carpeta fue el primer contacto con mongoose pero finalmente es
 ---
 
 #### EJERCICIOS CASA
-      1. Devolver la cuenta de cuántas películas y series hay en español
-      • Añadir los nombres de cada película en un array
+
+1. Devolver la cuenta de cuántas películas y series hay en español
+
+      • Añadir los nombres de cada película en un array.
+      
+![FOTO1](recursos/ej1.PNG)
+      
       • En lugar de array de nombres, que sean objetos que contengan:
          – nombre
          – año
